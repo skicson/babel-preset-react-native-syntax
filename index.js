@@ -1,7 +1,8 @@
 module.exports = function preset(api, options) {
   return {
     plugins: [
-      "@babel/syntax-jsx",
+        "@babel/plugin-syntax-jsx",
+        "@babel/syntax-jsx",
       "@babel/syntax-flow",
       ...(!!options.flow && options.flow === 'strip' ? ['@babel/transform-flow-strip-types'] : []),
       ...(!!options.flow && options.flow === 'comment' ? ['@babel/transform-flow-comments'] : []),
